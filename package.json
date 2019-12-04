@@ -1,0 +1,24 @@
+{
+  "name": "sf-androidx-migration",
+  "version": "1.0.0",
+  "description": "This utility  migrate already used support libraries to androidx.* package name.",
+  "main": "index.js",
+  "bin": {
+    "sf-androidx-migration": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smartface",
+    "util",
+    "sf-androidx"
+  ],
+  "dependencies": {
+    "find-in-files": "^0.5.0",
+    "replace-in-file": "^3.4.4"
+  },
+  "homepage": "https://github.com/smartface/sf-androidx-migration",
+  "author": "Muhammed Yalcin Kuru",
+  "license": "MIT"
+}
