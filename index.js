@@ -11,8 +11,8 @@ function getClasses(inputFile) {
     return new Promise((resolve, reject) => {
         const classObj = new Object();
         const paths = path.resolve(__dirname, inputFile);
-        const inputReadableStream = fs.createReadStream(paths)
-        const lineReader = readLine.createInterface(inputReadableStream);
+        const inputReadableStream = fs.createReadStream(paths);
+        const lineReader = readLine.createInterface({ input: inputReadableStream });
 
         lineReader.on('line', function (line) {
             let lineSplits = line.split(",");
@@ -24,8 +24,8 @@ function getClasses(inputFile) {
         lineReader.on('close', function () {
             resolve(classObj);
         });
-    })
-};
+    });
+}
 
 function migrateAndroidX20(dirPath) {
     getClasses('classes.txt').then((classObj) => {
@@ -43,7 +43,7 @@ function migrateAndroidX20(dirPath) {
                             files: filesPath,
                             from: androidSupportPackN,
                             to: androidXPackN
-                        }
+                        };
                         replaceInFile(options).then(results => {
                             results.forEach(result => {
                                 console.log(result + " --------------------> migrated to androidx");
