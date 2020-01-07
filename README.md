@@ -14,7 +14,7 @@ Migration tool can be installed via npm easily from our public npm repository. T
 
 ```javascript
 node --max-old-space-size=2048 ~/workspace/scripts/node_modules/sf-androidx-migration/index.js ~/workspace/scripts/
-node --max-old-space-size=2048 ~/workspace/scripts/node_modules/sf-androidx-migration/index.js ~/workspace/scripts/
+node --max-old-space-size=2048 ~/workspace/scripts/node_modules/sf-androidx-migration/index.js ~/workspace/config/
 ```
 
 ### ❗Important Note❗
