@@ -7,14 +7,14 @@ AndroidX replaces the original support library API's with packages in the androi
 Migration tool can be installed via npm easily from our public npm repository. The installation is pretty easy via Smartface Cloud IDE. Run the following code in terminal:
 
 ```bash
-(cd scripts && npm install sf-androidx-migration)
+(cd /projects/workspace && npm install --save-dev sf-androidx-migration)
 ```
 
 ## Usage
 
 ```javascript
-node --max-old-space-size=2048 ~/workspace/scripts/node_modules/sf-androidx-migration/index.js ~/workspace/scripts/
-node --max-old-space-size=2048 ~/workspace/scripts/node_modules/sf-androidx-migration/index.js ~/workspace/config/
+node --max-old-space-size=2048 /projects/workspace/node_modules/sf-androidx-migration/index.js /projects/workspace/workspace/scripts/
+node --max-old-space-size=2048 /projects/workspace/node_modules/sf-androidx-migration/index.js /projects/workspace/config/
 ```
 
 ### ❗Important Note❗
